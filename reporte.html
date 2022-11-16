@@ -2,58 +2,176 @@
 <html>
     <head>
         <link href="css/EstilosTablaPartidas.css" rel="stylesheet" type="text/css">
+        <link href="css/styleMenu.css" rel="stylesheet" type="text/css">
+        <script src="js/menu.js"></script>
         <title>Reporte</title>
     </head>
     <body>
-        <hr style="color: #0056b2;" />
-        <div class="row"> <!-- Tabla de partidas capturadas -->
-            <div class="col-sm-12 form-group">
-                <div class="scrollable">
-                    <table class="table table-hover table-bordered table-dark">
-                        <thead>
-                        <tr>
-                            <th scope="col">FACTURA</th>
-                            <th scope="col">NO. PARTIDA</th>
-                            <th scope="col">CLAVE PROD/SERV.</th>
-                            <th scope="col">CLAVE UNIDAD</th>
-                            <th scope="col">UNIDAD</th>
-                            <th scope="col">DESCRIPCION</th>
-                            <th scope="col">DESCUENTO</th>
-                            <th scope="col">CANTIDAD</th>
-                            <th scope="col">COSTO UNITARIO</th>
-                            <th scope="col">IMPORTE</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <th scope="row">F-00579</th>
-                            <td>1</td>
-                            <td>8111254</td>
-                            <td>E48</td>
-                            <td>NA</td>
-                            <td>Monitor ACER 25 pulgadas</td>
-                            <td>100</td>
-                            <td>5</td>
-                            <td>4300</td>
-                            <td>21400</td>
-                        </tbody>
-                    </table>
-                </div>
 
-            </div>
-        </div>
-
-        <div class=" col-sm-12 form-group"> <!-- Botones del grid -->
-            <div class="row justify-content-end">                        
-                <nav class="navbar navbar-light bg-white">
-                        <form class="form-inline">
-                        <button class="btn btn-outline-danger" type="button" onclick="EliminaReg()">Eliminar Partida</button>
-                        <button class="btn btn-outline-primary ml-1" type="button">Editar Partida</button>
-                        </form>
-                </nav>
-            </div>
+        <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Balance General</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Salir</a>
+          </div>
+           
+          <nav class="topnav">
+            <a href="#" onclick="openNav()">
+              <svg width="30" height="30" id="icoOpen">
+                  <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+                  <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+                  <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+              </svg>
+            </a>
+            <h1>SOI - [Nombre de la empresa] </h1>
+          </nav>        
+          <div id="main">
+            <!-- Add all your websites page content here  -->      
             <hr style="color: #0056b2;" />
-        </div> 
+            <div class="row"> <!-- Tabla de partidas capturadas -->
+                <div class="col-sm-12 form-group">
+                    <div class="scrollable">
+                        <table class="table table-hover table-bordered table-dark">
+                            <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">PROYECTO</th>
+                                <th scope="col">MONEDA</th>
+                                <th scope="col">STATUS</th>
+                                <th scope="col">PRESUPUESTO CLIENTE</th>
+                                <th scope="col">FACTURADO CLIENTES</th>
+                                <th scope="col">% FACTURADO</th>
+                                <th scope="col">PENDIENTE POR FACTURAR</th>
+                                <th scope="col">COSTO UNITARIO</th>
+                                <th scope="col">IMPORTE</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <th scope="row">1124</th>
+                                <td>F-00579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>
+                            <tbody>
+                                <th scope="row">1125</th>
+                                <td>F-20579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>
+                            <tbody>
+                                <th scope="row">1126</th>
+                                <td>F-12579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35s</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>
+                            <tbody>
+                                <th scope="row">1127</th>
+                                <td>R-00579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>
+                            <tbody>
+                                <th scope="row">1128</th>
+                                <td>F-50579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>
+                            <tbody>
+                                <th scope="row">1129</th>
+                                <td>J-07579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>
+                            <tbody>
+                                <th scope="row">1130</th>
+                                <td>J-90579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>
+                            <tbody>
+                                <th scope="row">1131</th>
+                                <td>R-99579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>
+                            <tbody>
+                                <th scope="row">1132</th>
+                                <td>J-55579</td>
+                                <td>MXN</td>
+                                <td>E48</td>
+                                <td>$123,456.00</td>
+                                <td>$3236457.35</td>
+                                <td>100</td>
+                                <td>5</td>
+                                <td>4300</td>
+                                <td>21400</td>
+                            </tbody>                                                                                                                                                                                                                                
+                        </table>
+                    </div>
 
+                </div>
+            </div>
+
+            <div class=" col-sm-12 form-group"> <!-- Botones del grid -->
+                <div class="row justify-content-end">                        
+                    <nav class="navbar navbar-light bg-white">
+                            <form class="form-inline">
+                            <button class="btn btn-outline-secondary" type="button" onclick="Exportar()">Exp. Balance General </button>
+                            <button class="btn btn-outline-primary ml-1" type="button">Sincronizar Aspel</button>
+                            </form>
+                    </nav>
+                </div>
+                <hr style="color: #0056b2;" />
+            </div> 
+        </div>  
 
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
